@@ -41,7 +41,7 @@ function About() {
             across Ontario & Québec
           </StyledListItem>
           <Container sx={{ pb: "30px" }}></Container>
-          <Link to="/quizeducator">
+          <Link to="/quiz?usertype=educator">
             <ThemedButton btnText={"Educators, start here"} />
           </Link>
         </Grid>
