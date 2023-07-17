@@ -23,7 +23,12 @@ const SplashPageBody = styled(Typography)(() => ({
 function QuizContent() {
   return (
     <div>
-      <Navbar />
+      <Navbar
+        aboutTitle="About"
+        servicesTitle="Services"
+        contactTitle="Contact"
+        workshopTitle="Find workshops near you..."
+      />
       <SplashPageTitle sx={{ pt: 4, ml: 3 }}>Example question!</SplashPageTitle>
       <SplashPageBody sx={{ pt: 2, pb: 4, ml: 3 }}>
         Question 1 of 5

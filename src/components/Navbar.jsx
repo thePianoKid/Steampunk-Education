@@ -34,7 +34,9 @@ const MenuItem = styled(Typography)(() => ({
   },
 }));
 
-function Navbar() {
+function Navbar(props) {
+  const { aboutTitle, servicesTitle, contactTitle, workshopTitle } = props;
+
   const [open, setOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState("");
 
@@ -69,7 +71,7 @@ function Navbar() {
               },
             }}
           >
-            Workshops near you...
+            {workshopTitle}
           </Button>
           <WorkshopSearchCity
             selectedValue={selectedValue}
@@ -82,12 +84,12 @@ function Navbar() {
             onClick={navHome}
           />
           <HashLink to="/#aboutAnchor" style={{ textDecoration: "none" }}>
-            <MenuItem>About</MenuItem>
+            <MenuItem>{aboutTitle}</MenuItem>
           </HashLink>
           <HashLink to="/#servicesAnchor" style={{ textDecoration: "none" }}>
-            <MenuItem>Services</MenuItem>
+            <MenuItem>{servicesTitle}</MenuItem>
           </HashLink>
-          <MenuItem onClick={navContact}>Contact</MenuItem>
+          <MenuItem onClick={navContact}>{contactTitle}</MenuItem>
         </Toolbar>
       </StyledAppBar>
     </Box>

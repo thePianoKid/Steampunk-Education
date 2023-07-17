@@ -5,7 +5,12 @@ import ContactForm from "./ContactForm";
 function Contact() {
   return (
     <div>
-      <Navbar />
+      <Navbar
+        aboutTitle="About"
+        servicesTitle="Services"
+        contactTitle="Contact"
+        workshopTitle="Find workshops near you..."
+      />
       <ContactForm
         titleText="Contact Steampunk"
         submitBtnText="Submit"

@@ -20,7 +20,12 @@ const SplashPageBody = styled(Typography)(() => ({
 function Booking() {
   return (
     <div>
-      <Navbar />
+      <Navbar
+        aboutTitle="About"
+        servicesTitle="Services"
+        contactTitle="Contact"
+        workshopTitle="Find workshops near you..."
+      />
       <SplashPageTitle sx={{ pt: 2 }}>Fake Booking Page :)</SplashPageTitle>
       <SplashPageBody sx={{ pt: 2 }}>
         When this site is put into use by Steampunk, pressing on a workshop will

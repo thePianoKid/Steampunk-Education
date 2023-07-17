@@ -26,7 +26,12 @@ const SplashPageBody = styled(Typography)(() => ({
 const Home = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar
+        aboutTitle="About"
+        servicesTitle="Services"
+        contactTitle="Contact"
+        workshopTitle="Find workshops near you..."
+      />
       <Grid container>
         <Grid xs={6}>
           <img
@@ -44,13 +49,13 @@ const Home = () => {
             Revolutionize your education centre with educational resources and
             passionate instructors who specialize in teaching STEM.
           </SplashPageBody>
-          <Link to="/quiz?usertype=educator">
+          <Link to="/quiz?usertype=educator&lang=en">
             <ThemedButton sx={{ mr: "40px" }} btnText={"Educators"} />
           </Link>
-          <Link to="/quiz?usertype=student">
+          <Link to="/quiz?usertype=student&lang=en">
             <ThemedButton sx={{ mr: "40px" }} btnText={"Students"} />
           </Link>
-          <Link to="/quiz?usertype=parent">
+          <Link to="/quiz?usertype=parent&lang=en">
             <ThemedButton btnText={"Parents"} />
           </Link>
         </Grid>

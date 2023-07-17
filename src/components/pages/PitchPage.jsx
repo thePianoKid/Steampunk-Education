@@ -25,7 +25,12 @@ function PitchPage(props) {
 
   return (
     <div>
-      <Navbar />
+      <Navbar
+        aboutTitle="About"
+        servicesTitle="Services"
+        contactTitle="Contact"
+        workshopTitle="Find workshops near you..."
+      />
       <SplashPageTitle sx={{ pt: 4, ml: 3 }}>{titleText}</SplashPageTitle>
       <SplashPageBody sx={{ pt: 2, pb: 4, ml: 3 }}>
         Here are the services we suggest for your education centre.

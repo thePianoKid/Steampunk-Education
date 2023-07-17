@@ -16,7 +16,12 @@ function Quote() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar
+        aboutTitle="About"
+        servicesTitle="Services"
+        contactTitle="Contact"
+        workshopTitle="Find workshops near you..."
+      />
       <ContactForm
         titleText={'Request Quote for "' + serviceName + '"'}
         submitBtnText="Request Quote"
