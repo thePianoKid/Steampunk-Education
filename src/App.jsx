@@ -12,6 +12,7 @@ import { properties } from "./properties";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import PageNotFound from "./components/pages/PageNotFound";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
   {
     path: "/book",
     element: <Booking />
+  },
+
+  {
+    path: "*",
+    element: <PageNotFound />
   }
 ])
 
