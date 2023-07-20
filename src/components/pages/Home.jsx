@@ -31,6 +31,7 @@ const Home = () => {
         servicesTitle="Services"
         contactTitle="Contact"
         workshopTitle="Find workshops near you..."
+        lang="en"
       />
       <Grid container>
         <Grid xs={6}>

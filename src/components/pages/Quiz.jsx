@@ -118,6 +118,7 @@ function Quiz() {
         servicesTitle={pageContent["navbar"]["services"][lang]}
         contactTitle={pageContent["navbar"]["contact"][lang]}
         workshopTitle={pageContent["navbar"]["workshop"][lang]}
+        lang={lang}
       />
       <SplashPageTitle aria-description="Quiz Title" sx={{ pt: 4, ml: 3 }}>
         {pageContent[userType]["pageTitle"][lang]}

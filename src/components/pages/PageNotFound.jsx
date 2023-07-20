@@ -25,6 +25,7 @@ function PageNotFound() {
         servicesTitle="Services"
         contactTitle="Contact"
         workshopTitle="Find workshops near you..."
+        lang="en"
       />
       <SplashPageTitle sx={{ pt: 2, pl: 3 }}>Page Not Found!</SplashPageTitle>
       <SplashPageBody sx={{ pt: 2, pb: 2, pl: 3 }}>

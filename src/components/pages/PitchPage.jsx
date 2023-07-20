@@ -30,6 +30,7 @@ function PitchPage(props) {
         servicesTitle="Services"
         contactTitle="Contact"
         workshopTitle="Find workshops near you..."
+        lang="en"
       />
       <SplashPageTitle sx={{ pt: 4, ml: 3 }}>{titleText}</SplashPageTitle>
       <SplashPageBody sx={{ pt: 2, pb: 4, ml: 3 }}>

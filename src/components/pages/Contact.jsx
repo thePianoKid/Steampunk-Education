@@ -10,6 +10,7 @@ function Contact() {
         servicesTitle="Services"
         contactTitle="Contact"
         workshopTitle="Find workshops near you..."
+        lang="en"
       />
       <ContactForm
         titleText="Contact Steampunk"

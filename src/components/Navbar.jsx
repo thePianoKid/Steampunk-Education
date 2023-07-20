@@ -5,7 +5,15 @@ import { styled } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import { Button, Typography } from "@mui/material";
+import {
+  Button,
+  Dialog,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  DialogActions,
+  Typography,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Search } from "@mui/icons-material";
@@ -35,13 +43,18 @@ const MenuItem = styled(Typography)(() => ({
 }));
 
 function Navbar(props) {
-  const { aboutTitle, servicesTitle, contactTitle, workshopTitle } = props;
+  const { aboutTitle, servicesTitle, contactTitle, workshopTitle, lang } =
+    props;
 
   const [open, setOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState("");
 
   const handleSearchOpen = () => {
     setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
 
   const handleSearchClose = (value) => {
@@ -75,13 +88,28 @@ function Navbar(props) {
           </Button>
           <WorkshopSearchCity
             selectedValue={selectedValue}
-            open={open}
+            open={open && !(lang === "pr")}
             onClose={handleSearchClose}
           />
+          <Dialog open={open && lang === "pr"}>
+            <DialogTitle>Nenhuma oficina foi encontrada</DialogTitle>
+            <DialogContent>
+              <DialogContentText>
+                Estamos trabalhando duro para estabelecer mais oficinas em sua
+                área, entre em contato conosco para mais informações.
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={handleClose} autoFocus>
+                OK
+              </Button>
+            </DialogActions>
+          </Dialog>
           <Logo
             src={logo}
             sx={{ ":hover": { cursor: "pointer" } }}
             onClick={navHome}
+            alt="Steampunk Education Logo"
           />
           <HashLink to="/#aboutAnchor" style={{ textDecoration: "none" }}>
             <MenuItem>{aboutTitle}</MenuItem>

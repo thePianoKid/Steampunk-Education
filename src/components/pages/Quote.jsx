@@ -21,6 +21,7 @@ function Quote() {
         servicesTitle="Services"
         contactTitle="Contact"
         workshopTitle="Find workshops near you..."
+        lang="en"
       />
       <ContactForm
         titleText={'Request Quote for "' + serviceName + '"'}

@@ -25,6 +25,7 @@ function Booking() {
         servicesTitle="Services"
         contactTitle="Contact"
         workshopTitle="Find workshops near you..."
+        lang="en"
       />
       <SplashPageTitle sx={{ pt: 2 }}>Fake Booking Page :)</SplashPageTitle>
       <SplashPageBody sx={{ pt: 2 }}>
