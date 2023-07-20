@@ -56,8 +56,8 @@ function WorkshopSearchCity({ onClose, selectedValue, open }) {
     for (let i = 1; i < row.availableWorkshops + 1; i++) {
       tempArr.push(
         createWorkshopData(
-          "Example workshop " + i.toString(),
-          "Example Education Centre",
+          "Sumo Roboot Bootcamp, August " + i.toString(),
+          "Elizabeth Kelly Library",
           row.ageRange
         )
       );
@@ -165,7 +165,7 @@ function WorkshopSearchCity({ onClose, selectedValue, open }) {
                   }}
                   onClick={() => handleCityClick(row)}
                   component={Link}
-                  to={searchForCity ? "" : "/book"}
+                  to={searchForCity ? "" : "https://www.jotform.com/231565242033245"}
                 >
                   <TableCell component="th" scope="row">
                     {searchForCity ? row.city : row.name}
