@@ -72,7 +72,7 @@ function WorkshopSearchCity({ onClose, selectedValue, open }) {
   const handleBack = () => {
     setRows(originalCityData);
     setSearchForCity(true);
-  }
+  };
 
   const searchThroughRows = (event) => {
     const userInput = event.target.value;
@@ -165,7 +165,12 @@ function WorkshopSearchCity({ onClose, selectedValue, open }) {
                   }}
                   onClick={() => handleCityClick(row)}
                   component={Link}
-                  to={searchForCity ? "" : "https://www.jotform.com/231565242033245"}
+                  to={
+                    searchForCity
+                      ? ""
+                      : "https://www.perthunionlibrary.ca/event/sumo-bot-competition/"
+                  }
+                  target={searchForCity ? "" : "_blank"}
                 >
                   <TableCell component="th" scope="row">
                     {searchForCity ? row.city : row.name}
